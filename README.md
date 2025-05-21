@@ -11,8 +11,7 @@ This projects collects my notes while studying the Windows internals. It is divi
 
 ## Important Windows Structures
 
-<details><summary> _DRIVER_OBJECT :</summary>
-
+\_DRIVER_OBJECT :
 ```c
 kd> dt nt!_DRIVER_OBJECT
    +0x000 Type             : Int2B
@@ -31,9 +30,8 @@ kd> dt nt!_DRIVER_OBJECT
    +0x034 DriverUnload     : Ptr32     void
    +0x038 MajorFunction    : [28] Ptr32     long
 ```
-</details>
-<details><summary> _DEVICE_OBJECT :</summary>
 
+ \_DEVICE_OBJECT:
 ```c
 kd> dt nt!_DEVICE_OBJECT
    +0x000 Type             : Int2B
@@ -62,10 +60,10 @@ kd> dt nt!_DEVICE_OBJECT
    +0x0b0 DeviceObjectExtension : Ptr32 _DEVOBJ_EXTENSION
    +0x0b4 Reserved         : Ptr32 Void
 ```
-</details>
 
-<details><summary> _IRP :</summary>
 
+
+\_IRP :
 ```c
 kd> dt nt!_IRP
    +0x000 Type             : Int2B
@@ -90,9 +88,9 @@ kd> dt nt!_IRP
    +0x03c UserBuffer       : Ptr32 Void
    +0x040 Tail             : <unnamed-tag>
 ```
-</details>
 
-<details><summary> _IO_STACK_LOCATION :</summary>
+
+\_IO_STACK_LOCATION :
 
 ```c
 kd> dt nt!_IO_STACK_LOCATION
@@ -106,10 +104,8 @@ kd> dt nt!_IO_STACK_LOCATION
    +0x01c CompletionRoutine : Ptr32     long
    +0x020 Context          : Ptr32 Void
 ```
-</details>
 
-<details><summary> _KPCR :</summary>
-
+\_KPCR 
 ```c
 kd> dt nt!_KPCR
    +0x000 NtTib            : _NT_TIB
